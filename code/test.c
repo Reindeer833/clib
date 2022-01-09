@@ -9,6 +9,7 @@ int main()
 	pcn(c);
 	avl(r,c);
 	printf("\nAbs value: %10.10Lg\n",r);
+	printf("\n");
 
 	return 0;
 }
