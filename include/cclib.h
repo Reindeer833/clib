@@ -6,6 +6,7 @@
  * Note: link with math library libm.so: gcc -g -Wall test.c -o res -lm
  * The math library is named libm.so, and the -l command option assumes a lib prefix and .a or .so
  *
+ *
  */
 #include     <math.h>
 
