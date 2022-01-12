@@ -5,9 +5,9 @@ int main()
 {
 	icn(a)	
 	ccn(b,10,20);
-	acn(c,a,b);
+	aacn(c,a,b);
 	pcn(c);
-	avl(r,c);
+	aavl(r,c);
 	printf("\nAbs value: %10.10Lg\n",r);
 	printf("\n");
 
