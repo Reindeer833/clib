@@ -3,13 +3,26 @@
 
 int main()
 {
-	icn(a)	
-	ccn(b,10,20);
-	aacn(c,a,b);
+	cnb a;
+	icn(a,1,1);
+	cnb b;
+	icn(b,1,1);
+	cnb c;
+	dcn(c,a,b);
 	pcn(c);
-	aavl(r,c);
-	printf("\nAbs value: %10.10Lg\n",r);
-	printf("\n");
-/* Also test multiplication */
+
+	icn(a,1,0);
+	icn(b,0,1);
+	dcn(c,a,b);
+	pcn(c);
+	
+	ncn(b);
+	icn(a,1,1);
+
+	for(int i=0;i<10;++i)
+	{
+		acn(b,b,a);
+	}
+	pcn(b);
 	return 0;
 }
