@@ -1,6 +1,6 @@
 #ifndef      __CCLIB_H
 #define      __CCLIB_H
- 
+
 /*
  *
  * Note: link with math library libm.so: gcc -g -Wall test.c -o res -lm
@@ -19,7 +19,7 @@ typedef struct complex_number
 #define ncn(X)     X.r=(long double)0;X.i=(long double)0;
 #define icn(X,R,I) X.r=(long double)R;X.i=(long double)I;
 
-#define pcn(X) printf("\n%-10.10Lg %-10.10Lg\n",X.r,X.i);
+#define pcn(X) printf("\n%-10.10Lg +  j%-10.10Lg\n",X.r,X.i);
 
 #define acn(A,B,C)          A.r=B.r+C.r; A.i=B.i+C.i;
 #define scn(A,B,C)          A.r=B.r-C.r; A.i=B.i-C.i;
@@ -29,14 +29,15 @@ typedef struct complex_number
 
 #define mcn(A,B,C)          A.r=B.r*C.r-B.i*C.i; A.i=B.r*C.i+B.i*C.r;
 
-#define conj(A,B)           A.r=B.r;A.i=-B.i;
-#define conji(A)            A.i=-A.i;
+#define cnj(A,B)           A.r=B.r;A.i=-B.i;
+#define cnji(A)            A.i=-A.i;
 
 
 #define asg(A,B)            A.r=B.r;A.i=B.i;
 
 #define dcn(A,B,C)          A.r=B.r*C.r+B.i*C.i; A.i=-B.r*C.i+B.i*C.r;A.r=A.r/(C.r*C.r+C.i*C.i);A.i=A.i/(C.r*C.r+C.i*C.i);
 
+#define  cexp(A,B)          {long double tmp=exp(B.r);A.r=tmp*cos(B.i);A.i=tmp*sin(B.i); }
 
 
 #endif
