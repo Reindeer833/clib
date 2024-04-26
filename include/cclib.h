@@ -16,8 +16,8 @@ typedef struct complex_number
 	long double i;
 }cnb;
 
-#define ncn(X)     X.r=(long double)0;X.i=(long double)0;
-#define icn(X,R,I) X.r=(long double)R;X.i=(long double)I;
+#define ncn(X)      cnb X; X.r=(long double)0;X.i=(long double)0;
+#define icn(X,R,I)  X.r=(long double)R;X.i=(long double)I;
 
 #define pcn(X) printf("\n%-10.10Lg +  j%-10.10Lg\n",X.r,X.i);
 
